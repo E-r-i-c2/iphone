@@ -8,10 +8,34 @@
 import SwiftUI
 import AVFoundation
 
+struct CameraPreview: UIViewRepresentable {
+    class VideoPreviewView: UIView {
+        override class var layerClass: AnyClass {
+            AVCaptureVideoPreviewLayer.self
+        }
+        
+        var videoPreviewLayer: AVCaptureVideoPreviewLayer {
+            return layer as! AVCaptureVideoPreviewLayer
+        }
+    }
+    
+    let session: AVCaptureSession
+    
+    func makeUIView(context: Context) -> VideoPreviewView {
+        let view = VideoPreviewView()
+        view.videoPreviewLayer.session = session
+        view.videoPreviewLayer.videoGravity = .resizeAspectFill
+        return view
+    }
+    
+    func updateUIView(_ uiView: VideoPreviewView, context: Context) {}
+}
+
 struct ContentView: View {
     @State private var brightness: Double = 1.0
     @State private var selectedColor = Color.white
     @State private var showingControls = true
+    @State private var captureSession: AVCaptureSession?
     
     let defaultColors: [(String, Color)] = [
         ("Pure White", .white),
@@ -27,6 +51,24 @@ struct ContentView: View {
         let components = backgroundColor.cgColor?.components ?? [1, 1, 1, 1]
         let luminance = 0.299 * components[0] + 0.587 * components[1] + 0.114 * components[2]
         return luminance > 0.5 ? .black : .white
+    }
+    
+    func setupCaptureSession() {
+        guard captureSession == nil else { return }
+        
+        let session = AVCaptureSession()
+        guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front),
+              let input = try? AVCaptureDeviceInput(device: device) else { return }
+        
+        session.beginConfiguration()
+        session.addInput(input)
+        session.commitConfiguration()
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            session.startRunning()
+        }
+        
+        captureSession = session
     }
     
     var body: some View {
@@ -49,9 +91,14 @@ struct ContentView: View {
                         .fill(.black)
                         .frame(width: 200, height: 260)
                         .overlay {
-                            Image(systemName: "camera.fill")
-                                .font(.system(size: 50))
-                                .foregroundColor(.white)
+                            if let session = captureSession {
+                                CameraPreview(session: session)
+                                    .clipShape(RoundedRectangle(cornerRadius: 18))
+                            } else {
+                                Image(systemName: "camera.fill")
+                                    .font(.system(size: 50))
+                                    .foregroundColor(.white)
+                            }
                         }
                     
                     VStack {
@@ -69,6 +116,9 @@ struct ContentView: View {
                 }
                 .frame(width: 200, height: 260)
                 .padding(.top, 40)
+                .onAppear {
+                    setupCaptureSession()
+                }
                 
                 Spacer()
                 
@@ -120,26 +170,15 @@ struct ContentView: View {
     }
     
     func takeSnapshot() {
-        guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front) else { return }
+        guard let session = captureSession else { return }
         
-        do {
-            let input = try AVCaptureDeviceInput(device: device)
-            let output = AVCapturePhotoOutput()
-            let session = AVCaptureSession()
-            
-            session.beginConfiguration()
-            session.addInput(input)
-            session.addOutput(output)
-            session.commitConfiguration()
-            
-            session.startRunning()
-            
-            let settings = AVCapturePhotoSettings()
-            output.capturePhoto(with: settings, delegate: PhotoCaptureDelegate())
-            
-        } catch {
-            print("Error setting up camera: \(error.localizedDescription)")
-        }
+        let output = AVCapturePhotoOutput()
+        session.beginConfiguration()
+        session.addOutput(output)
+        session.commitConfiguration()
+        
+        let settings = AVCapturePhotoSettings()
+        output.capturePhoto(with: settings, delegate: PhotoCaptureDelegate())
     }
 }
 

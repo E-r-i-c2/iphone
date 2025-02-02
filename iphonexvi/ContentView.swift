@@ -8,34 +8,10 @@
 import SwiftUI
 import AVFoundation
 
-struct CameraPreview: UIViewRepresentable {
-    class VideoPreviewView: UIView {
-        override class var layerClass: AnyClass {
-            AVCaptureVideoPreviewLayer.self
-        }
-        
-        var videoPreviewLayer: AVCaptureVideoPreviewLayer {
-            return layer as! AVCaptureVideoPreviewLayer
-        }
-    }
-    
-    let session: AVCaptureSession
-    
-    func makeUIView(context: Context) -> VideoPreviewView {
-        let view = VideoPreviewView()
-        view.videoPreviewLayer.session = session
-        view.videoPreviewLayer.videoGravity = .resizeAspectFill
-        return view
-    }
-    
-    func updateUIView(_ uiView: VideoPreviewView, context: Context) {}
-}
-
 struct ContentView: View {
     @State private var brightness: Double = 1.0
     @State private var selectedColor = Color.white
     @State private var showingControls = true
-    @State private var captureSession: AVCaptureSession?
     
     let defaultColors: [(String, Color)] = [
         ("Pure White", .white),
@@ -47,28 +23,9 @@ struct ContentView: View {
     ]
     
     func getContrastColor(for backgroundColor: Color) -> Color {
-        // Simple luminance calculation
         let components = backgroundColor.cgColor?.components ?? [1, 1, 1, 1]
         let luminance = 0.299 * components[0] + 0.587 * components[1] + 0.114 * components[2]
         return luminance > 0.5 ? .black : .white
-    }
-    
-    func setupCaptureSession() {
-        guard captureSession == nil else { return }
-        
-        let session = AVCaptureSession()
-        guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front),
-              let input = try? AVCaptureDeviceInput(device: device) else { return }
-        
-        session.beginConfiguration()
-        session.addInput(input)
-        session.commitConfiguration()
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            session.startRunning()
-        }
-        
-        captureSession = session
     }
     
     var body: some View {
@@ -91,20 +48,15 @@ struct ContentView: View {
                         .fill(.black)
                         .frame(width: 200, height: 260)
                         .overlay {
-                            if let session = captureSession {
-                                CameraPreview(session: session)
-                                    .clipShape(RoundedRectangle(cornerRadius: 18))
-                            } else {
-                                Image(systemName: "camera.fill")
-                                    .font(.system(size: 50))
-                                    .foregroundColor(.white)
-                            }
+                            Image(systemName: "camera.fill")
+                                .font(.system(size: 50))
+                                .foregroundColor(.white)
                         }
                     
                     VStack {
                         Spacer()
                         Button {
-                            takeSnapshot()
+                            takeQuickSnapshot()
                         } label: {
                             Image(systemName: "camera.circle.fill")
                                 .font(.system(size: 40))
@@ -116,9 +68,6 @@ struct ContentView: View {
                 }
                 .frame(width: 200, height: 260)
                 .padding(.top, 40)
-                .onAppear {
-                    setupCaptureSession()
-                }
                 
                 Spacer()
                 
@@ -169,23 +118,23 @@ struct ContentView: View {
         }
     }
     
-    func takeSnapshot() {
-        guard let session = captureSession else { return }
+    func takeQuickSnapshot() {
+        let session = AVCaptureSession()
+        guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front),
+              let input = try? AVCaptureDeviceInput(device: device) else { return }
         
         let output = AVCapturePhotoOutput()
-        session.beginConfiguration()
+        session.addInput(input)
         session.addOutput(output)
-        session.commitConfiguration()
         
-        let settings = AVCapturePhotoSettings()
-        output.capturePhoto(with: settings, delegate: PhotoCaptureDelegate())
+        output.capturePhoto(with: AVCapturePhotoSettings(), delegate: QuickPhotoCapture())
     }
 }
 
-class PhotoCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
+class QuickPhotoCapture: NSObject, AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        guard let imageData = photo.fileDataRepresentation(),
-              let image = UIImage(data: imageData) else { return }
+        guard let data = photo.fileDataRepresentation(),
+              let image = UIImage(data: data) else { return }
         
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }

@@ -1,13 +1,13 @@
 //
-//  iphonexviTests.swift
-//  iphonexviTests
+//  FillCameraTests.swift
+//  FillCameraTests
 //
-//  Created by Lei Boyang on 2/2/25.
+//  Created by Legolas on 2/2/25.
 //
 
 import Testing
 
-struct iphonexviTests {
+struct FillCameraTests {
 
     @Test func example() async throws {
         // Write your test here and use APIs like `#expect(...)` to check expected conditions.

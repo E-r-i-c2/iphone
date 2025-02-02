@@ -7,62 +7,62 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		95E6130F2D4F038C00101903 /* PBXContainerItemProxy */ = {
+		EB714F472D4F0B0E0047CCD3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 95E612F52D4F038800101903 /* Project object */;
+			containerPortal = EB714F2D2D4F0B0C0047CCD3 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 95E612FC2D4F038800101903;
-			remoteInfo = iphonexvi;
+			remoteGlobalIDString = EB714F342D4F0B0C0047CCD3;
+			remoteInfo = FillCamera;
 		};
-		95E613192D4F038C00101903 /* PBXContainerItemProxy */ = {
+		EB714F512D4F0B0E0047CCD3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 95E612F52D4F038800101903 /* Project object */;
+			containerPortal = EB714F2D2D4F0B0C0047CCD3 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 95E612FC2D4F038800101903;
-			remoteInfo = iphonexvi;
+			remoteGlobalIDString = EB714F342D4F0B0C0047CCD3;
+			remoteInfo = FillCamera;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		95E612FD2D4F038800101903 /* iphonexvi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iphonexvi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		95E6130E2D4F038C00101903 /* iphonexviTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iphonexviTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		95E613182D4F038C00101903 /* iphonexviUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iphonexviUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB714F352D4F0B0C0047CCD3 /* FillCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FillCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB714F462D4F0B0E0047CCD3 /* FillCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FillCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB714F502D4F0B0E0047CCD3 /* FillCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FillCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		95E612FF2D4F038800101903 /* iphonexvi */ = {
+		EB714F372D4F0B0C0047CCD3 /* FillCamera */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iphonexvi;
+			path = FillCamera;
 			sourceTree = "<group>";
 		};
-		95E613112D4F038C00101903 /* iphonexviTests */ = {
+		EB714F492D4F0B0E0047CCD3 /* FillCameraTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iphonexviTests;
+			path = FillCameraTests;
 			sourceTree = "<group>";
 		};
-		95E6131B2D4F038C00101903 /* iphonexviUITests */ = {
+		EB714F532D4F0B0E0047CCD3 /* FillCameraUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iphonexviUITests;
+			path = FillCameraUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		95E612FA2D4F038800101903 /* Frameworks */ = {
+		EB714F322D4F0B0C0047CCD3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95E6130B2D4F038C00101903 /* Frameworks */ = {
+		EB714F432D4F0B0E0047CCD3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95E613152D4F038C00101903 /* Frameworks */ = {
+		EB714F4D2D4F0B0E0047CCD3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,22 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		95E612F42D4F038800101903 = {
+		EB714F2C2D4F0B0C0047CCD3 = {
 			isa = PBXGroup;
 			children = (
-				95E612FF2D4F038800101903 /* iphonexvi */,
-				95E613112D4F038C00101903 /* iphonexviTests */,
-				95E6131B2D4F038C00101903 /* iphonexviUITests */,
-				95E612FE2D4F038800101903 /* Products */,
+				EB714F372D4F0B0C0047CCD3 /* FillCamera */,
+				EB714F492D4F0B0E0047CCD3 /* FillCameraTests */,
+				EB714F532D4F0B0E0047CCD3 /* FillCameraUITests */,
+				EB714F362D4F0B0C0047CCD3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		95E612FE2D4F038800101903 /* Products */ = {
+		EB714F362D4F0B0C0047CCD3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95E612FD2D4F038800101903 /* iphonexvi.app */,
-				95E6130E2D4F038C00101903 /* iphonexviTests.xctest */,
-				95E613182D4F038C00101903 /* iphonexviUITests.xctest */,
+				EB714F352D4F0B0C0047CCD3 /* FillCamera.app */,
+				EB714F462D4F0B0E0047CCD3 /* FillCameraTests.xctest */,
+				EB714F502D4F0B0E0047CCD3 /* FillCameraUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,134 +95,126 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		95E612FC2D4F038800101903 /* iphonexvi */ = {
+		EB714F342D4F0B0C0047CCD3 /* FillCamera */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95E613222D4F038C00101903 /* Build configuration list for PBXNativeTarget "iphonexvi" */;
+			buildConfigurationList = EB714F5A2D4F0B0E0047CCD3 /* Build configuration list for PBXNativeTarget "FillCamera" */;
 			buildPhases = (
-				95E612F92D4F038800101903 /* Sources */,
-				95E612FA2D4F038800101903 /* Frameworks */,
-				95E612FB2D4F038800101903 /* Resources */,
+				EB714F312D4F0B0C0047CCD3 /* Sources */,
+				EB714F322D4F0B0C0047CCD3 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				95E612FF2D4F038800101903 /* iphonexvi */,
+				EB714F372D4F0B0C0047CCD3 /* FillCamera */,
 			);
-			name = iphonexvi;
+			name = FillCamera;
 			packageProductDependencies = (
 			);
-			productName = iphonexvi;
-			productReference = 95E612FD2D4F038800101903 /* iphonexvi.app */;
+			productName = FillCamera;
+			productReference = EB714F352D4F0B0C0047CCD3 /* FillCamera.app */;
 			productType = "com.apple.product-type.application";
 		};
-		95E6130D2D4F038C00101903 /* iphonexviTests */ = {
+		EB714F452D4F0B0E0047CCD3 /* FillCameraTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95E613252D4F038C00101903 /* Build configuration list for PBXNativeTarget "iphonexviTests" */;
+			buildConfigurationList = EB714F5D2D4F0B0E0047CCD3 /* Build configuration list for PBXNativeTarget "FillCameraTests" */;
 			buildPhases = (
-				95E6130A2D4F038C00101903 /* Sources */,
-				95E6130B2D4F038C00101903 /* Frameworks */,
-				95E6130C2D4F038C00101903 /* Resources */,
+				EB714F422D4F0B0E0047CCD3 /* Sources */,
+				EB714F432D4F0B0E0047CCD3 /* Frameworks */,
+				EB714F442D4F0B0E0047CCD3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				95E613102D4F038C00101903 /* PBXTargetDependency */,
+				EB714F482D4F0B0E0047CCD3 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				95E613112D4F038C00101903 /* iphonexviTests */,
+				EB714F492D4F0B0E0047CCD3 /* FillCameraTests */,
 			);
-			name = iphonexviTests;
+			name = FillCameraTests;
 			packageProductDependencies = (
 			);
-			productName = iphonexviTests;
-			productReference = 95E6130E2D4F038C00101903 /* iphonexviTests.xctest */;
+			productName = FillCameraTests;
+			productReference = EB714F462D4F0B0E0047CCD3 /* FillCameraTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		95E613172D4F038C00101903 /* iphonexviUITests */ = {
+		EB714F4F2D4F0B0E0047CCD3 /* FillCameraUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95E613282D4F038C00101903 /* Build configuration list for PBXNativeTarget "iphonexviUITests" */;
+			buildConfigurationList = EB714F602D4F0B0E0047CCD3 /* Build configuration list for PBXNativeTarget "FillCameraUITests" */;
 			buildPhases = (
-				95E613142D4F038C00101903 /* Sources */,
-				95E613152D4F038C00101903 /* Frameworks */,
-				95E613162D4F038C00101903 /* Resources */,
+				EB714F4C2D4F0B0E0047CCD3 /* Sources */,
+				EB714F4D2D4F0B0E0047CCD3 /* Frameworks */,
+				EB714F4E2D4F0B0E0047CCD3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				95E6131A2D4F038C00101903 /* PBXTargetDependency */,
+				EB714F522D4F0B0E0047CCD3 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				95E6131B2D4F038C00101903 /* iphonexviUITests */,
+				EB714F532D4F0B0E0047CCD3 /* FillCameraUITests */,
 			);
-			name = iphonexviUITests;
+			name = FillCameraUITests;
 			packageProductDependencies = (
 			);
-			productName = iphonexviUITests;
-			productReference = 95E613182D4F038C00101903 /* iphonexviUITests.xctest */;
+			productName = FillCameraUITests;
+			productReference = EB714F502D4F0B0E0047CCD3 /* FillCameraUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		95E612F52D4F038800101903 /* Project object */ = {
+		EB714F2D2D4F0B0C0047CCD3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					95E612FC2D4F038800101903 = {
+					EB714F342D4F0B0C0047CCD3 = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					95E6130D2D4F038C00101903 = {
+					EB714F452D4F0B0E0047CCD3 = {
 						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 95E612FC2D4F038800101903;
+						TestTargetID = EB714F342D4F0B0C0047CCD3;
 					};
-					95E613172D4F038C00101903 = {
+					EB714F4F2D4F0B0E0047CCD3 = {
 						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 95E612FC2D4F038800101903;
+						TestTargetID = EB714F342D4F0B0C0047CCD3;
 					};
 				};
 			};
-			buildConfigurationList = 95E612F82D4F038800101903 /* Build configuration list for PBXProject "iphonexvi" */;
+			buildConfigurationList = EB714F302D4F0B0C0047CCD3 /* Build configuration list for PBXProject "FillCamera" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 95E612F42D4F038800101903;
+			mainGroup = EB714F2C2D4F0B0C0047CCD3;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 95E612FE2D4F038800101903 /* Products */;
+			productRefGroup = EB714F362D4F0B0C0047CCD3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				95E612FC2D4F038800101903 /* iphonexvi */,
-				95E6130D2D4F038C00101903 /* iphonexviTests */,
-				95E613172D4F038C00101903 /* iphonexviUITests */,
+				EB714F342D4F0B0C0047CCD3 /* FillCamera */,
+				EB714F452D4F0B0E0047CCD3 /* FillCameraTests */,
+				EB714F4F2D4F0B0E0047CCD3 /* FillCameraUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		95E612FB2D4F038800101903 /* Resources */ = {
+		EB714F442D4F0B0E0047CCD3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95E6130C2D4F038C00101903 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95E613162D4F038C00101903 /* Resources */ = {
+		EB714F4E2D4F0B0E0047CCD3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,21 +224,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		95E612F92D4F038800101903 /* Sources */ = {
+		EB714F312D4F0B0C0047CCD3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95E6130A2D4F038C00101903 /* Sources */ = {
+		EB714F422D4F0B0E0047CCD3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95E613142D4F038C00101903 /* Sources */ = {
+		EB714F4C2D4F0B0E0047CCD3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,20 +248,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		95E613102D4F038C00101903 /* PBXTargetDependency */ = {
+		EB714F482D4F0B0E0047CCD3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 95E612FC2D4F038800101903 /* iphonexvi */;
-			targetProxy = 95E6130F2D4F038C00101903 /* PBXContainerItemProxy */;
+			target = EB714F342D4F0B0C0047CCD3 /* FillCamera */;
+			targetProxy = EB714F472D4F0B0E0047CCD3 /* PBXContainerItemProxy */;
 		};
-		95E6131A2D4F038C00101903 /* PBXTargetDependency */ = {
+		EB714F522D4F0B0E0047CCD3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 95E612FC2D4F038800101903 /* iphonexvi */;
-			targetProxy = 95E613192D4F038C00101903 /* PBXContainerItemProxy */;
+			target = EB714F342D4F0B0C0047CCD3 /* FillCamera */;
+			targetProxy = EB714F512D4F0B0E0047CCD3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		95E613202D4F038C00101903 /* Debug */ = {
+		EB714F582D4F0B0E0047CCD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -330,7 +322,7 @@
 			};
 			name = Debug;
 		};
-		95E613212D4F038C00101903 /* Release */ = {
+		EB714F592D4F0B0E0047CCD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -383,18 +375,20 @@
 			};
 			name = Release;
 		};
-		95E613232D4F038C00101903 /* Debug */ = {
+		EB714F5B2D4F0B0E0047CCD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = iphonexvi/iphonexvi.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FillCamera/FillCamera.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iphonexvi/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FillCamera/Preview Content\"";
+				DEVELOPMENT_TEAM = Z4H2R846T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_FILE = FillCamera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "需要访问相机来进行拍摄";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -408,9 +402,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iphonexvi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.legolas.FillCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -421,18 +415,20 @@
 			};
 			name = Debug;
 		};
-		95E613242D4F038C00101903 /* Release */ = {
+		EB714F5C2D4F0B0E0047CCD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = iphonexvi/iphonexvi.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FillCamera/FillCamera.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iphonexvi/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FillCamera/Preview Content\"";
+				DEVELOPMENT_TEAM = Z4H2R846T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_FILE = FillCamera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "需要访问相机来进行拍摄";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -446,9 +442,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iphonexvi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.legolas.FillCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -459,7 +455,7 @@
 			};
 			name = Release;
 		};
-		95E613262D4F038C00101903 /* Debug */ = {
+		EB714F5E2D4F0B0E0047CCD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -467,21 +463,21 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iphonexviTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.legolas.FillCameraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iphonexvi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iphonexvi";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FillCamera.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FillCamera";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Debug;
 		};
-		95E613272D4F038C00101903 /* Release */ = {
+		EB714F5F2D4F0B0E0047CCD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,58 +485,58 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iphonexviTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.legolas.FillCameraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iphonexvi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iphonexvi";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FillCamera.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FillCamera";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
 		};
-		95E613292D4F038C00101903 /* Debug */ = {
+		EB714F612D4F0B0E0047CCD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iphonexviUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.legolas.FillCameraUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = iphonexvi;
+				TEST_TARGET_NAME = FillCamera;
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Debug;
 		};
-		95E6132A2D4F038C00101903 /* Release */ = {
+		EB714F622D4F0B0E0047CCD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iphonexviUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.legolas.FillCameraUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = iphonexvi;
+				TEST_TARGET_NAME = FillCamera;
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
@@ -548,43 +544,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		95E612F82D4F038800101903 /* Build configuration list for PBXProject "iphonexvi" */ = {
+		EB714F302D4F0B0C0047CCD3 /* Build configuration list for PBXProject "FillCamera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95E613202D4F038C00101903 /* Debug */,
-				95E613212D4F038C00101903 /* Release */,
+				EB714F582D4F0B0E0047CCD3 /* Debug */,
+				EB714F592D4F0B0E0047CCD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95E613222D4F038C00101903 /* Build configuration list for PBXNativeTarget "iphonexvi" */ = {
+		EB714F5A2D4F0B0E0047CCD3 /* Build configuration list for PBXNativeTarget "FillCamera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95E613232D4F038C00101903 /* Debug */,
-				95E613242D4F038C00101903 /* Release */,
+				EB714F5B2D4F0B0E0047CCD3 /* Debug */,
+				EB714F5C2D4F0B0E0047CCD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95E613252D4F038C00101903 /* Build configuration list for PBXNativeTarget "iphonexviTests" */ = {
+		EB714F5D2D4F0B0E0047CCD3 /* Build configuration list for PBXNativeTarget "FillCameraTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95E613262D4F038C00101903 /* Debug */,
-				95E613272D4F038C00101903 /* Release */,
+				EB714F5E2D4F0B0E0047CCD3 /* Debug */,
+				EB714F5F2D4F0B0E0047CCD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95E613282D4F038C00101903 /* Build configuration list for PBXNativeTarget "iphonexviUITests" */ = {
+		EB714F602D4F0B0E0047CCD3 /* Build configuration list for PBXNativeTarget "FillCameraUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95E613292D4F038C00101903 /* Debug */,
-				95E6132A2D4F038C00101903 /* Release */,
+				EB714F612D4F0B0E0047CCD3 /* Debug */,
+				EB714F622D4F0B0E0047CCD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 95E612F52D4F038800101903 /* Project object */;
+	rootObject = EB714F2D2D4F0B0C0047CCD3 /* Project object */;
 }

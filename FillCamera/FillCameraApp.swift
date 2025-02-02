@@ -1,14 +1,14 @@
 //
-//  iphonexviApp.swift
-//  iphonexvi
+//  FillCameraApp.swift
+//  FillCamera
 //
-//  Created by Lei Boyang on 2/2/25.
+//  Created by Legolas on 2/2/25.
 //
 
 import SwiftUI
 
 @main
-struct iphonexviApp: App {
+struct FillCameraApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

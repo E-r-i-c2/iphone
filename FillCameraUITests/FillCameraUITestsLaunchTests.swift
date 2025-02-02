@@ -1,13 +1,13 @@
 //
-//  iphonexviUITestsLaunchTests.swift
-//  iphonexviUITests
+//  FillCameraUITestsLaunchTests.swift
+//  FillCameraUITests
 //
-//  Created by Lei Boyang on 2/2/25.
+//  Created by Legolas on 2/2/25.
 //
 
 import XCTest
 
-final class iphonexviUITestsLaunchTests: XCTestCase {
+final class FillCameraUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

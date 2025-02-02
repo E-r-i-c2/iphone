@@ -280,14 +280,34 @@ struct CameraView: View {
     @StateObject private var camera = CameraModel()
     
     var body: some View {
-        GeometryReader { geometry in
-            CameraPreviewView(camera: camera)
-                .onAppear {
-                    camera.start()
+        ZStack {
+            GeometryReader { geometry in
+                CameraPreviewView(camera: camera)
+                    .onAppear {
+                        camera.start()
+                    }
+                    .onDisappear {
+                        camera.stop()
+                    }
+            }
+            
+            // 添加拍照按钮
+            VStack {
+                Spacer()
+                Button(action: {
+                    camera.takePhoto()
+                }) {
+                    Circle()
+                        .fill(Color.white)
+                        .frame(width: 70, height: 70)
+                        .overlay(
+                            Circle()
+                                .stroke(Color.pink, lineWidth: 2)
+                                .frame(width: 60, height: 60)
+                        )
                 }
-                .onDisappear {
-                    camera.stop()
-                }
+                .padding(.bottom, 20)
+            }
         }
     }
 }
@@ -317,10 +337,16 @@ struct CameraPreviewView: UIViewRepresentable {
     }
 }
 
-// 添加相机模型类
-class CameraModel: ObservableObject {
+// 修改 CameraModel 类定义
+class CameraModel: NSObject, ObservableObject {
     var session = AVCaptureSession()
     var preview: AVCaptureVideoPreviewLayer!
+    private var photoOutput = AVCapturePhotoOutput()
+    
+    override init() {
+        super.init()
+        // 如果需要在初始化时做一些设置，可以在这里添加
+    }
     
     func start() {
         setupCamera()
@@ -328,6 +354,11 @@ class CameraModel: ObservableObject {
     
     func stop() {
         session.stopRunning()
+    }
+    
+    func takePhoto() {
+        let settings = AVCapturePhotoSettings()
+        photoOutput.capturePhoto(with: settings, delegate: self)
     }
     
     private func setupCamera() {
@@ -348,6 +379,11 @@ class CameraModel: ObservableObject {
                 session.addInput(input)
             }
             
+            // 添加照片输出
+            if session.canAddOutput(photoOutput) {
+                session.addOutput(photoOutput)
+            }
+            
             // 设置视频质量
             session.sessionPreset = .high
             
@@ -359,6 +395,25 @@ class CameraModel: ObservableObject {
             
         } catch {
             print("相机设置错误: \(error.localizedDescription)")
+        }
+    }
+}
+
+// 让 CameraModel 遵循 AVCapturePhotoCaptureDelegate 协议
+extension CameraModel: AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let imageData = photo.fileDataRepresentation(),
+           let image = UIImage(data: imageData) {
+            // 保存照片到相册
+            UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveCompleted), nil)
+        }
+    }
+    
+    @objc func saveCompleted(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            print("保存失败: \(error.localizedDescription)")
+        } else {
+            print("照片已保存到相册")
         }
     }
 }

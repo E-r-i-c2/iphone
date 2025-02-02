@@ -10,5 +10,7 @@
 	<array>
 		<dict/>
 	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>需要访问相册来保存照片</string>
 </dict>
 </plist>
